@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./asset/logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <nav id="nav-bar">
+        <a href="/" class="brand">
+            <img src="./asset/new-logo.png" alt="logo">
+        </a>
+        <a class="link" href="/">Home</a>
+        <a class="link" href="/contact">Contact</a>
+    </nav>
+
+
+    <div class="grid">
+        <h2>QR Code Generator</h2>
+        <a href="" id="dwn" onclick="downloadQr()">
+            <img src="" id="img">
+        </a>
+        
+        <p id="msg">Click the QR to open and download it</p>
+
+        <select name="size" id="size">
+            <option class="options" value="-1">--Size--</option>
+            <option class="options" value="200">200x200</option>
+            <option class="options" value="250">250x250</option>
+            <option class="options" value="300">300x300</option>
+            <option class="options" value="400">400x400</option>
+            <option class="options" value="500">500x500</option>
+            <!-- <option value="100">100x100</option> -->
+        </select>
+        <textarea name="data" id="data" cols="30" rows="5" placeholder="Enter your text here..."></textarea>
+        <input type="submit" value="Generate QR" onclick="generateQR()" class="gen-btn">
+
+        <p>Developed with <span class="heart">&hearts;</span> by us</p>
+    </div>
+
+    <script src="FileSaver.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
